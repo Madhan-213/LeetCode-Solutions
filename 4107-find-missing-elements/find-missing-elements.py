@@ -6,7 +6,8 @@ class Solution:
         maximum = max(nums)
 
         for i in range(minimum, maximum + 1):
-            if i not in nums:
+            nums_set = set(nums)
+            if i not in nums_set:
                 missing.append(i)
 
         return missing
